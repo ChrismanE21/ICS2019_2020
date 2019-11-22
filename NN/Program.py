@@ -18,7 +18,7 @@ data=pandas.read_csv("iris.data", header = None)
 
 
 #4
-sns.pairplot( data=data,vars=(0,1,2,3), hue=4 )
+#sns.pairplot( data=data,vars=(0,1,2,3), hue=4 )
 #plt.show()
 
 #Could you use this to predict the type of iris based on the lengths of different flower parts?  
@@ -54,10 +54,10 @@ X, y = shuffle(X,y,random_state=0)
 
 
 #9
-trainX = X[:100]
-trainy = y[:100]
-testX = X[100:]
-testy = y[100:]
+trainX = X[:75]
+trainy = y[:75]
+testX = X[75:]
+testy = y[75:]
 
 #10
 clf = MLPClassifier(hidden_layer_sizes=[3,3,3,3],max_iter = 100000, random_state=0,)

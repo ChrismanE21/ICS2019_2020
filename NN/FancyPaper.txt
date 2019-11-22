@@ -1,0 +1,16 @@
+Introduction
+I have made a neural network that can identify a probable guess of a Overwatch player's competitive ranking tier. The game Overwatch is a competitive class based shooter that uses a rank system to balance teams and reward highly skilled players.. Unlike traditional competitive systems in where you start at the lowest rank and make your way "up the ladder", Overwatch uses a mix of a seasonal system and a placement system.
+Seasonal means the scores get erased after a time period and a placement system means the game will put you thourgh placement matches and, depending on how well a player performs,, they will get placed in their respective spot on the “ladder”. The scale goes from 1 to 5000 SR (Skill Rating) and the scale is separated into ranks. Ranks from lowest to highest are: Broze, Silver, Gold, Plat, Diamond, Masters, and Grand Master.
+Contrary to popular belief, placement is not determined based off of wins nor loses, but based off the stats of the player. My program will guess what rank a person should get if they play mainly as the character Mercy. Mercy's important stats include healing, damage boosted, revives, and deaths. If a person enters that information into the program, the program will decide where the person should be placed.
+
+Procedure
+The program is created in Python 3.7.3 and was given player data. Numpy is used to put data in arrays for the program to process and read. All data stems from Mercy mains. The website overbuff.com shows general stats for mercy. This is where I chose Which stats were important. Data was gathered from low Masters leaderboards and from my recent players. Then the data was entered in a text file that the program could read. 
+The program then takes the data and shuffles it into a new list. The neural network is contrasted and the hidden layer sizes are added. Then the shuffled list is processed by the neural network and the output is produced. The output is what the program sorts the data into. The program then compares the output to the original data. A percent of accuracy is then produce. 
+After the percent accuracy is produced. The size of hidden networks is changed and the program runs again. Based off the new percent accuracy compared to the old percent accuracy, adjustments are made.
+
+Results
+The highest percent accuracy is 81% with the hidden layers [3,3,3,3]. Most trials resulted with 51%, 54%, or 61%. Arrays that are four long tend to have better results. This is probably due to only four different types of data points being present.
+
+Conclusion
+This neural networks guesses what rank you will get for overwatch Mercy mains based of player stats. Average deaths, average healing, average damage boosted, and average revives are used. The program uses pre existing player data to determine placement. The highest accuracy is 81% but can be improved with more data samples.
+
