@@ -7,7 +7,7 @@ from sklearn.utils import shuffle
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import cross_validate
 
-data=pandas.read_csv("MercyOverwatchStats+Scource=overbuff.data", header = None) #Reads from the file
+data=pandas.read_csv("OverwatchDataNormalizePer.data", header = None) #Reads from the file
 
 data=np.array(data) #Puts data in a readable array
 
@@ -27,4 +27,4 @@ clf.fit(trainX, trainy)
 prediction=clf.predict(testX) #This test the NN with it's own data
 
 cv_results = cross_validate(clf, X, y, cv=4) #Normalizes code
-print(cv_results) #Shows a percent of how well it did///Highest = 81% with [3,3,3,3]
+print(cv_results) #Shows a percent of how well it did///Highest = 41% no normalize. Highest = 83% divide normalize. Highest = 86% fercercy diagram
