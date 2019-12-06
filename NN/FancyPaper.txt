@@ -2,16 +2,15 @@ Introduction
 	Overwatch is a competitive shooter that uses an elo rank system to place players within their skill rankings. Player stats are put through some kind of black box that overwatch uses to categorize players. The purpose of this project is to replicate this black box if someone used the character “mercy”. Mercy is a simple character with a few major stats making her the easiest to use. Four stats - healing,deaths,revives,damage boosted - are used.
 
 Procedure
-	The program is created in Python 3.7.3. Stats are first gathered from Overwatch players who play Mercy. Stats are from Overbuff.com, random players, and from friends.
+	The eviorment is created and ran in Python 3.7.3. Stats are first gathered from Overwatch players who play Mercy. Stats are from Overbuff.com, random players, and from friends.
 	
 	The data frist is normalized in two different ways. The stats for healing and damage for high in the ten thousands and thousands respectively. The healing stats are divided by ten thousands and damage stats are divided by one thousand. This new data set is put through the neural network. The alternate method is by normalizing the data with a fercercy datagram. This method produces a percent of fercercy.
 	
 	To test how accurate the neural network is, the same data used is randomize with the random seed “1”. The code prints a percent of how accurate the process is. 
 
 Results
-	The highest accuracy score is 86% with the hidden layers [3,3,3,3] and with the fercercy datagram. The second highest accuracy score is 83% when the data is normalized through division. The lowest accuracy score is with no normalization and is 46%.
+	https://docs.google.com/document/d/1GbuOM7VU42T9FeL-yCLW3Ew2lhDqdnMiDakFjnm03Fs/edit
 
-Conclusion
-	This project is a great first start to predicting how the overwatch placement matches work. While gathering data, I realized higher level mercy players can have surprisingly high amount of kills. To better this project, more different types of data points should be added.
+
 
 
