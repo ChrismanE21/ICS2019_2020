@@ -1,15 +1,16 @@
 Introduction
-	Overwatch is a competitive shooter that uses an elo rank system to place players within their skill rankings. Player stats are put through some kind of black box that overwatch uses to categorize players. The purpose of this project is to replicate this black box if someone used the character “mercy”. Mercy is a simple character with a few major stats making her the easiest to use. Four stats - healing,deaths,revives,damage boosted - are used.
+	Overwatch is a competitive shooter that uses an elo rank system to place players within their skill rankings. This helps the system make more balanced games for players. Player stats are put through some kind of black box that overwatch uses to categorize players. The purpose of this project is to replicate this black box if someone used the character “mercy”. Mercy is a simple character with a few major stats making her the easiest to use. Four stats - healing, deaths, revives, and damage boosted - are used.
 
 Procedure
-	The eviorment is created and ran in Python 3.7.3. Stats are first gathered from Overwatch players who play Mercy. Stats are from Overbuff.com, random players, and from friends.
+	The environment was created in Python 3.7.3. Stats were first gathered from Overwatch players who play Mercy. Stats were from Overbuff.com and random players. Using Pandas version 0.25.3, the data is printed into a graph for better understanding.
 	
-	The data frist is normalized in two different ways. The stats for healing and damage for high in the ten thousands and thousands respectively. The healing stats are divided by ten thousands and damage stats are divided by one thousand. This new data set is put through the neural network. The alternate method is by normalizing the data with a fercercy datagram. This method produces a percent of fercercy.
-	
-	To test how accurate the neural network is, the same data used is randomize with the random seed “1”. The code prints a percent of how accurate the process is. 
+	The data is normalized by add (ask Dr. Waddel). This is only done to damage and healing stats. This new data set is put through the neural network. To test how accurate the neural network is, the data shuffles with the random seed “0”. The code prints a percent of how accurate the process is. 
 
 Results
 	https://docs.google.com/document/d/1GbuOM7VU42T9FeL-yCLW3Ew2lhDqdnMiDakFjnm03Fs/edit
+
+Conclusion
+	Overwatch sorts players based off of player stats. The stats the program used were from real players. A neural network simulated the black box Overwatch used to balance the game. The results were about 85% accurate. The network could be further improved by using all of the characters stats instead of a selected few. 
 
 
 
