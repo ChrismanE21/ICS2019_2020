@@ -1,5 +1,15 @@
 Introduction
-	Overwatch is a competitive shooter that uses an elo rank system to place players within their skill rankings. This helps the system make more balanced games for players. Player stats are put through some kind of black box that overwatch uses to categorize players. The purpose of this project is to replicate this black box if someone used the character “mercy”. Mercy is a simple character with a few major stats making her the easiest to use. Four stats - healing, deaths, revives, and damage boosted - are used.
+	A common misconception with competitive Overwatch, a team-based shooter, is that rank is based off of wins and losses. While partially true, the elo system in overwatch is based off of the player’s personal skills rather than bad teammates or misfortunate matches. To prove this, a neural network will be used to simulate Overwatch placement matches.
+	
+	Overwatch’s competitive system is based off an elo ranking system¹. Elo ranking gives a numerical value for each player’s skill. When two players go against each other, the difference of the two numbers determine the chances of one player winning². Overwatch uses a numerical value between 1 (lowest skill) and 5000 (highest skill) and it is called skill ranking, or SR for short. For better understanding, SR is split up into categories from bronze to grand masters. Every Overwatch season, players will participate in placement matches. These matches give the player a starting position
+	
+	The project will use a neural network to predict the category a player should fall into based off of stats. Neural networks are multiple algorithms that can recognize patterns². It uses data from players to make its predictions. Neural networks will be useful for this project since it can replicate the “black box” overwatch uses.
+	
+	Lance McDiffett performed a similar project which focused on modeling how a players SR would increase or decrease. When a player loses, an amount of their SR will go to the victor. The game deterimends how much based off the difference of both SRs. If the skill ratings are far apart and the person with the lowest SR wins, he would gain a large amount of SR. If this person lost, he would lose very little¹. He used the logistic function to find possible SR losses/gains depending on both players rankings.
+	
+	The goal of this project is to predict where a person will be placed after their placement matches. At least 85% accuracy is expected out of the neural network by the end of this project. For simplicity, the character “Mercy” will be used for she is an easy character to define. Depending on the success of this project, it will properly get expanded to here any character can get categories.
+	
+	To start this project, stats were collected from “Mercy mains” (people who play primarily Mercy) from three diffenft skill levels - gold and under, platinum to diamond, and masters and above. This same data set is randomized and put through the neural network and the accuracy is recorded. Different amounts of nodes are experimented with to find the greatest result.
 
 Procedure
 	The environment was created in Python 3.7.3. Stats were first gathered from Overwatch players who play Mercy. Stats were from Overbuff.com and random players. Using Pandas version 0.25.3, the data is printed into a graph for better understanding.
@@ -11,6 +21,17 @@ Results
 
 Conclusion
 	Overwatch sorts players based off of player stats. The stats the program used were from real players. A neural network simulated the black box Overwatch used to balance the game. The results were about 85% accurate. The network could be further improved by using all of the characters stats instead of a selected few. 
+	
+
+	
+Works Cited
+	1) McDiffett, Lance. “The Math Behind Your Competitive Overwatch Match.” Medium. Towards Data Science, November 10, 2018. https://towardsdatascience.com/the-math-behind-your-competitive-overwatch-match-a5184fc5a50f.
+	
+	2) Nicholson, Chris. “A Beginner's Guide to Neural Networks and Deep Learning.” Pathmind. Accessed December 13, 2019. https://pathmind.com/wiki/neural-network.
+
+	3)“Elo Rating System.” Wikipedia. Wikimedia Foundation, November 24, 2019. https://en.wikipedia.org/wiki/Elo_rating_system.
+
+
 
 
 
