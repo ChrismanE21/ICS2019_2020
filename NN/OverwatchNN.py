@@ -7,7 +7,7 @@ from sklearn.utils import shuffle
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import cross_validate
 
-data=pandas.read_csv("SmallDataSet.data", header = None) #Reads from the file
+data=pandas.read_csv("OverwatchDataNormalizePer.data", header = None) #Reads from the file
 
 import matplotlib.pyplot as plt
 
@@ -27,7 +27,7 @@ X, y = shuffle(X,y,random_state=1) #First step in testing NN
 # ~ testX = X[75:]
 # ~ testy = y[75:]
 
-clf = MLPClassifier(hidden_layer_sizes=[30],max_iter = 100000, random_state=0,) #This is the NN 
+clf = MLPClassifier(hidden_layer_sizes=[28],max_iter = 100000, random_state=0,) #This is the NN 
 # ~ clf.fit(trainX, trainy)
 
 # ~ prediction=clf.predict(testX) #This test the NN with it's own data
