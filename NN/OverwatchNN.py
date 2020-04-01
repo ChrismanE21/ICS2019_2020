@@ -27,9 +27,8 @@ X, y = shuffle(X,y,random_state=1) #First step in testing NN
 # ~ testX = X[75:]
 # ~ testy = y[75:]
 
-clf = MLPClassifier(hidden_layer_sizes=[28],max_iter = 100000, random_state=0,) #This is the NN 
-# ~ clf.fit(trainX, trainy)
-
+clf = MLPClassifier(hidden_layer_sizes=[1],max_iter = 100000, random_state=0,) #This is the NN 
+# ~ clf.fit(trainX, trainy)1
 # ~ prediction=clf.predict(testX) #This test the NN with it's own data
 
 cv_results = cross_validate(clf, X, y, cv=3) #Normalizes code
