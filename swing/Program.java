@@ -123,7 +123,7 @@ class MyPanel extends JPanel implements MouseMotionListener, MouseListener
 		int movement = 1;//1 for up, 2 for left, 3 for down, 4 for right
 		freshBoard();
 		findStart();
-		for(int move = 20; move >= 0;move--){ 
+		for(int move = 200; move >= 0;move--){ 
 			for(int i = 1; i<=8; i++){
 				for(int j = 1; j<=8; j++){
 					if(board[i][j] == 1){
